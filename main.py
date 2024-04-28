@@ -75,6 +75,4 @@ while True:
     draw_time(hours, minutes, seconds)
 
     screen.update()
-
     
-
