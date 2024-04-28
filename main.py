@@ -43,5 +43,17 @@ def draw_hands(length, rotation):
     uzbek.penup()
 
 
+def draw_time(h, m, s):
+    uzbek.penup()
+    uzbek.goto(-220, -220)
+    uzbek.pendown()
+    formatted_time = f"{h}:{m}:{s}"
+    uzbek.color("white")
+    uzbek.write(formatted_time, move=False, align="left", font=("Arial", 16, "normal"))
+    uzbek.penup()
+
+
+
+
 
 turtle.done()
