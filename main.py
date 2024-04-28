@@ -1,4 +1,5 @@
 import turtle
+from datetime import datetime
 
 
 turtle.setup(500, 500, 0, 0)
@@ -53,7 +54,21 @@ def draw_time(h, m, s):
     uzbek.penup()
 
 
+while True:
+    time = datetime.now()
 
+    hours = time.hour
+    minutes = time.minute
+    seconds = time.second
 
+    uzbek.clear()
+    draw_watchface()
+    uzbek.color("blue")
+    draw_hands(160, hours * 30)
+    uzbek.color("red")
+    draw_hands(160, minutes * 6)
+    uzbek.color("green")
+    draw_hands(160, seconds * 6)
 
-turtle.done()
+    draw_time(hours, minutes, seconds)
+
