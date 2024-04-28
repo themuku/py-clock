@@ -5,7 +5,7 @@ from datetime import datetime
 screen = turtle.Screen()
 screen.setup(500, 500, 0, 0)
 screen.screensize(480, 480, bg="#ccc")
-turtle.tracer(0)
+screen.tracer(0)
 
 uzbek = turtle.Turtle()
 
@@ -57,6 +57,7 @@ def draw_time(h, m, s):
 
 while True:
     time = datetime.now()
+    uzbek.hideturtle()
 
     hours = time.hour
     minutes = time.minute
@@ -75,4 +76,3 @@ while True:
     draw_time(hours, minutes, seconds)
 
     screen.update()
-    
