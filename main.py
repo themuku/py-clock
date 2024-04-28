@@ -2,8 +2,9 @@ import turtle
 from datetime import datetime
 
 
-turtle.setup(500, 500, 0, 0)
-turtle.screensize(480, 480, bg="#ccc")
+screen = turtle.Screen()
+screen.setup(500, 500, 0, 0)
+screen.screensize(480, 480, bg="#ccc")
 turtle.tracer(0)
 
 uzbek = turtle.Turtle()
@@ -64,11 +65,16 @@ while True:
     uzbek.clear()
     draw_watchface()
     uzbek.color("blue")
-    draw_hands(160, hours * 30)
+    draw_hands(100, hours * 30)
     uzbek.color("red")
-    draw_hands(160, minutes * 6)
+    draw_hands(130, minutes * 6)
     uzbek.color("green")
+    uzbek.pensize(3)
     draw_hands(160, seconds * 6)
 
     draw_time(hours, minutes, seconds)
+
+    screen.update()
+
+    
 
